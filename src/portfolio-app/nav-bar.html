@@ -48,9 +48,7 @@
         const arg = e.target.getAttribute('target');
         const app = document.getElementsByTagName('portfolio-app')[0];
         const section = app.shadowRoot.querySelector(arg);
-
-        section.scrollIntoView();
-        window.scrollBy(0, -43);  // adjust scroll
+        section.scrollIntoView({behavior:"smooth", block: "start", inline: "start"});
       }
     }
 
