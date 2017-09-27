@@ -7,9 +7,35 @@
         margin: 0;
         padding: 0;
       }
+      .flex--inline {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 1rem;
+      }
+      #projects > div:nth-child(2) {
+        padding-top: 130px;
+      }
+      #parallax {
+        background-color: #585858;
+        -webkit-box-shadow: inset 0px 0px 45px -1px rgba(0,0,0,1);
+        -moz-box-shadow: inset 0px 0px 45px -1px rgba(0,0,0,1);
+        box-shadow: inset 0px 0px 45px -1px rgba(0,0,0,1);
+        height: 600px;
+        position: absolute;
+        transform: skewY(5deg);
+        width: 100%;
+        z-index: 1;
+      }
+      .project {
+        background-color: red;
+        flex-basis: 30%;
+        height: 150px;
+        z-index: 10;
+      }
       section { 
         background-color: cornflowerblue ;
-        min-height: 500px; 
+        min-height: 300px; 
         padding-top: 3rem 
       }
       section:nth-child(even) {
