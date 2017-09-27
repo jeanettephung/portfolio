@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="nav-bar">
+  <template>
+    <style>
+      :host {
+        background-color: red;
+        display: block;
+      }
+      
+    </style>
+    <h2>Hello I am the navbar!</h2>
+  </template>
+
+  <script>
+    class NavBar extends Polymer.Element {
+      static get is() { return 'nav-bar'; }
+      static get properties() {
+        return {
+          
+        };
+      }
+    }
+
+    window.customElements.define(NavBar.is, NavBar);
+  </script>
+</dom-module>
+
+<dom-module id="nav-bar">
+  <template>
+    <style include="main-style">
+      :host {
+        background-color: red;
+        display: block;
+      }
+      
+    </style>
+    <h2>Hello I am the navbar!</h2>
+  </template>
+
+  <script>
+    class NavBar extends Polymer.Element {
+      static get is() { return 'nav-bar'; }
+      static get properties() {
+        return {
+          
+        };
+      }
+    }
+
+    window.customElements.define(NavBar.is, NavBar);
+  </script>
+</dom-module>

@@ -1,20 +1,32 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./main-style.html">
+<link rel="import" href="./nav-bar.html">
 
 <dom-module id="portfolio-app">
   <template>
-    <style>
+    <style include="main-style">
       :host {
         display: block;
       }
     </style>
+    <nav-bar></nav-bar>
     <h2>Hello [[prop1]]!</h2>
+    <section>
+      <h3>Header</h3>
+    </section>
+    <section>
+      <h3>About</h3>
+    </section>
+    <sectino>
+      <h3>Projects</h3>
+    </sectino>
+    <section>
+      <h3>Contact</h3>
+    </section>
+    
   </template>
 
   <script>
-    /**
-     * @customElement
-     * @polymer
-     */
     class PortfolioApp extends Polymer.Element {
       static get is() { return 'portfolio-app'; }
       static get properties() {
