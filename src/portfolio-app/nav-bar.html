@@ -1,41 +1,39 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-
-<dom-module id="nav-bar">
-  <template>
-    <style>
-      :host {
-        background-color: #FFF;
-        display: block;
-      }
-      
-    </style>
-    <h2>Hello I am the navbar!</h2>
-  </template>
-
-  <script>
-    class NavBar extends Polymer.Element {
-      static get is() { return 'nav-bar'; }
-      static get properties() {
-        return {
-          
-        };
-      }
-    }
-
-    window.customElements.define(NavBar.is, NavBar);
-  </script>
-</dom-module>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Share" rel="stylesheet">
 
 <dom-module id="nav-bar">
   <template>
     <style include="main-style">
       :host {
-        background-color: red;
-        display: block;
+        background-color: #FFF;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0 !important;
+        position: fixed;
+        width: 100%;
       }
-      
+      h2 { 
+        font-family: 'Share', cursive; 
+        margin-left: 1rem;
+      }
+      li:last-child {
+        margin-right: 1rem;
+      }
+      li { 
+        display: inline;
+        cursor: pointer;
+        font-family: 'Open Sans', sans-serif; 
+        margin-left: 1rem;
+      }
     </style>
-    <h2>Hello I am the navbar!</h2>
+    
+    <h2 on-click="scrollTo" target="#intro">&lt; JP /&gt;</a></h2>    
+
+    <ul>
+      <li on-click="scrollTo" target="#about">About</li>
+      <li on-click="scrollTo" target="#projects">Projects</li>
+      <li on-click="scrollTo" target="#contact">Contact</li>
+    </ul>
   </template>
 
   <script>
@@ -45,6 +43,14 @@
         return {
           
         };
+      }
+      scrollTo(e) {
+        const arg = e.target.getAttribute('target');
+        const app = document.getElementsByTagName('portfolio-app')[0];
+        const section = app.shadowRoot.querySelector(arg);
+
+        section.scrollIntoView();
+        window.scrollBy(0, -43);  // adjust scroll
       }
     }
 
