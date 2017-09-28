@@ -1,5 +1,4 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Share" rel="stylesheet">
 
 <dom-module id="nav-bar">
   <template>
@@ -13,8 +12,9 @@
         width: 100%;
         z-index: 1000;
       }
-      h2 { 
+      #nav--logo { 
         font-family: 'Share', cursive; 
+        font-size: 1.5rem;
         margin-left: 1rem;
       }
       li:last-child {
@@ -28,7 +28,7 @@
       }
     </style>
     
-    <h2 on-click="scrollTo" target="#intro">&lt; JP /&gt;</a></h2>    
+    <div id="nav--logo" on-click="scrollTo" target="#intro">&lt; JP /&gt;</a></div>    
 
     <ul>
       <li on-click="scrollTo" target="#about">About</li>
