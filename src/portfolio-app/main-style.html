@@ -7,14 +7,25 @@
         margin: 0;
         padding: 0;
       }
-      .flex--inline {
+      body { background-color: rebeccapurple; }
+      h3 { z-index: 40; }
+      .flex--col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .flex--row {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         margin: 1rem;
       }
-      #projects > div:nth-child(2) {
-        padding-top: 130px;
+      .container-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 25px;
       }
       #parallax {
         background-attachment: fixed;
@@ -25,25 +36,53 @@
         -webkit-box-shadow: inset 0px 0px 45px -1px rgba(0,0,0,1);
         -moz-box-shadow: inset 0px 0px 45px -1px rgba(0,0,0,1);
         box-shadow: inset 0px 0px 45px -1px rgba(0,0,0,1);
-        height: 600px;
+        height: 70%;
         position: absolute;
         transform: skewY(5deg);
         width: 100%;
         z-index: 25;
       }
+      #projects { background-color: rebeccapurple }
+      #projects > div:nth-child(2) {
+        padding-top: 2rem;
+      }
       .project {
         background-color: red;
-        flex-basis: 30%;
+        -webkit-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.75);
+        cursor: pointer;
+        flex-basis: 45%;
         height: 150px;
+        margin: 1.5rem;
+        transition: all 0.3s ease-in-out;
         z-index: 50;
+      }
+      .project:hover {
+        
+        -webkit-box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.75);
+        transform: scale(1.2, 1.2);
+        
       }
       section { 
         background-color: cornflowerblue ;
-        min-height: 300px; 
+        min-height: 500px; 
         padding-top: 3rem 
       }
       section:nth-child(even) {
         background-color: rebeccapurple;
+      }
+
+      @media (min-width: 768px) {
+        .project {
+          flex-basis: 25%;
+        }
+        .inner {
+          margin: 0 auto;
+          max-width: 1024px;
+        }
       }
     </style>
   </template>

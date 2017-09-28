@@ -12,30 +12,47 @@
     <nav-bar></nav-bar>
   
     <section id="intro">
-      <h3>Intro</h3>
+      <div class="inner">
+        <h3>Intro</h3>
+      </div>
     </section>
 
     <section id="about">
-      <h3>About</h3>
+      <div class="inner">
+        <h3>About</h3>
+      </div>
     </section>
 
     <section id="projects">
       <div id="parallax"></div>
-      <div class="flex--inline">
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
+      <div class="inner">
+        <div class="container-header">
+          <h3>Projects</h3>           
+        </div>          
+        <div class="flex--row">
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+        </div>
       </div>
-      <div class="flex--inline">
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-      </div>
-      <h3>Projects</h3>
     </section>
 
     <section id="contact">
-      <h3>Contact</h3>
+      <div class="inner">
+        <h3>Contact</h3>
+        <div class="flex--row">
+          <div class="flex--col">
+            <label for="name"></label>
+            <input type="text" name="name">
+            <label for="email"></label>
+            <input type="email" name="email">
+          </div>
+          <textarea></textarea>
+        </div>
+      </div>
     </section>
     
   </template>
